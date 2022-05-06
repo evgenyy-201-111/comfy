@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!--Язык сайта-->
+<html lang="ru">
+<head> <!--Техническая часть сайта-->
+    {% block title %}<title>Document</title>{% endblock %}
+    {% block description %}
+    <meta name="description" content="comify"/>
+    {% endblock %}
+    {% block keywords %}
+    <meta name="keywords" content="comify"/>
+    {% endblock %}
+    {% load static %}
+	<!--Подключение js файла-->
+	<script type="text/javascript" src="{% static ' js/jquery.js' %}"></script> <!--Библиотека jQuery-->
+	<script type="text/javascript" src="{% static ' js/functions.js' %}"></script>
+	<!--Подключение css файла-->
+	<link rel="stylesheet" href="{% static 'styles/main.css' %}" type="text/css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <!--Текст во вкладке-->
+    <link href="{% static 'favicon.ico' %}" rel="shortcut icon" type="image/x-icon"/>
+</head>
+<body>
+	<div id="topmenu">
+        <ul>
+            <li id="logo">
+                <img src="static/images/Лого.png" alt="">
+            </li>
+            <li>
+                <a href="{% url 'index' %}">Лучшее</a>
+            </li>
+            <li>
+                <a href="">Вакансии</a>
+            </li>
+        </ul>
+        <div id="search">
+            <form name="search" action="" method="get">
+                <button>
+                    <img src="static/images/lupa.png" alt="">
+                </button>
+                <input src="static/images/search.png" type="text" placeholder="Поиск">
+            </form>
+        </div>
+        <div id="login">
+            <div id="vhod">
+                <a href=""><img src="static/images/vhod.png" alt="Войти"></a>
+            </div>
+            <div id="registration">
+                <a href=""><img src="static/images/registration.png" alt="Регистрация"></a>
+            </div>
+        </div>
+    </div>
+    <div id="primer">
+		<img src="static/images/primer1.png" alt="" width="200" height="240">
+    	<img src="static/images/primer2.png" alt="" width="200" height="240">
+    	<img src="static/images/primer1.png" alt="" width="200" height="240">
+		<img src="static/images/primer3.png" alt="" width="200" height="240">
+		<img src="static/images/primer1.png" alt="" width="200" height="240">
+	</div>
+    <div id="right">
+        {% block content %}{% endblock %}
+    </div>
+    <div id="footer">
+            <div id="pm">
+            </div>
+            <div id="copy">
+                <div id="Contacts">
+                    <h5>Контакты</h5>
+                    <p>Телефон 8-800-123-45-67</p>
+                </div>
+                <div id="Vakansii">
+                    <h5>Вакансии</h5>
+                    <p>Все вакансии</p>
+                    <p>Вакансии по категории</p>
+                </div>
+                <div id="Help">
+                    <h5>Поддержка</h5>
+                    <p>чат с администратором</p>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

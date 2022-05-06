@@ -1,0 +1,27 @@
+{% extends 'main.html' %}
+{% block title %}<title>Comify</title>{% endblock %}
+{% block content %}
+<table>
+    <tr>
+        {% block main_header %}
+        <td rowspan="2">
+            <div class="header">
+                {% block header %}<h3>Лучшее из Comify</h3>{% endblock %}
+            </div>
+        </td>
+        {% endblock %}
+    </tr>
+</table>
+<table class="products">
+    {% for product in products %}
+        {% cycle '<tr>' '' '' '' '' '' '' %}
+        {% include 'product.html' %}
+        {% if forloop.last %}
+                </tr>
+        {% else %}
+            {% cycle '' '' '' '' '' ''  %}
+
+        {% endif %}
+    {% endfor %}
+</table>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'main.html' %}
+{% block title %}
+    <title>
+        {{ product.title }}
+    </title>
+{% endblock %}
+{% block description %}
+    <meta name="description" content="Проект: {{ product.title }}"/>
+{% endblock %}
+{% block keywords %}
+<meta name="keywords" content="описание {{ product.title|lower }}, проект {{ product.title|lower }}"/>
+{% endblock %}
+{% block content %}
+{% load static %}
+<table id="product_detail">
+    <tr class="product_1">
+        <td class="product_img">
+            <img src="{{ product.image.url }}" alt="{{ product.section.title }}" width="460" height="300"/>
+        </td>
+        <td class="product_desc">
+            <h1>Название: <span class="title">{{ product.title }}</span></h1>
+            <h2><span class="country">{{ product.country }}</span></h2>
+            <a href="">
+                <img src="{% static 'images/help.png' %}" width="209" height="45"/>
+            </a>
+        </td>
+    </tr>
+    <div class="product_2">
+            <td class="product_img">
+                <img src="{% static 'images/garden1.jpg' %}" alt="{{ product.section.title }}" width="460" height="300"/>
+            </td>
+            <td class="product_desc">
+                <h3>Актуальность</h3>
+                    <p><span class="description">{{ product.description_actual }}</span></p>
+                <h3>Описание</h3>
+                    <p><span class="description">{{ product.description }}</span></p>
+            </td>
+    </div>
+</table>
+
+{% endblock %}

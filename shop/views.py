@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views import generic
 
 from shop.models import Product, Section
 
@@ -12,3 +13,7 @@ def index(request):
         'index.html',
         context=context
     )
+
+
+class ProductDetailView(generic.DetailView):
+    model = Product

@@ -1,60 +1,109 @@
 body {
 	font-family: 'Roboto', sans-serif;
-	margin: 0;
-	padding: 0;
-}
-#topmenu {
-	border: 1px solid #000000;
-	height: 31px;
-    padding-top: 10px;
-    margin: 0 35px;
-}
-
-#topmenu ul {
-	list-style: none;
-	margin: 0;
 	padding: 0;
 }
 
-#topmenu ul li {
+header{
+	width: 100%;
+	margin-top: -8px;
+	margin-left: -8px;
+	margin-right: 20px;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #295CE2;
+	z-index:1;
+}
+#header-logo{
+	width: 30%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;
+}
+#header-nav {
+	font-family: 'Roboto', sans-serif;
+	width: 30%;
+    margin: 0 3%;
+    display: flex;
+    justify-content: flex-end;
+      -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;
+}
+#header-nav-best {
+	font-family: 'Roboto', sans-serif;
+	width: 30%;
 	float: left;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;
+}
+#header-nav ul {
+			    padding:0;
+			    margin:0;
+			    list-style: none;
+			    position: relative;
+			    }
+#header-nav ul li {
+			    margin: 0px 0 0 0;
+			    display:inline-block;
+                background-color: #295CE2;
+}
+#header-nav a {
+				width: 140px;
+			    display:block;
+			    padding:0 19px;
+			    color:#FFF;
+			    font-size:13pt;
+			    line-height: 50px;
+			    text-decoration:none;
+			    align-items: center;
+			    transition: .1s;
+
+}
+#header-nav a:hover {
+			background-color: #295CE2;
+			transition: .5s;
+			font-weight:700;
+		}
+#header-nav ul ul {
+			    display: none;
+			    position: absolute;
+			    top:100%;
+			    text-align: center;
+			}
+#header-nav ul li:hover > ul {
+			    display:inherit;
+
+}
+#header-nav ul ul li {
+			    min-width:105px;
+			    float:none;
+			    display:list-item;
+			    position: relative;
 }
 
-#topmenu ul li  img {
-	margin-top: -9px;
-}
-
-#topmenu a {
-	color: rgb(0, 0, 0);
-	display: block;
-	font-size: 130%;
-	margin: 0 20px;
-	text-decoration: none;
-}
-
-#topmenu a:hover {
-	color: #25aded;
-	text-decoration: underline;
-}
-
-#login {
+#MainProduct {
 	text-align: right;
-    margin-top: -30px;
+    margin-right: 5%;
+    margin-left: 5%;
 }
 
-#registration {
-	text-align: right;
-    margin-right: 15px;
-    margin-top: -33px;
-}
-
-#vhod {
-	text-align: right;
-    margin-right: 140px;
-    margin-top: -30px;
-}
-
-#primer {
+#slider {
 	display: block;
 	text-align: center;
     margin: 10px 20px;
@@ -65,27 +114,26 @@ body {
 }
 
 #header div {
-	margin-top: -75px;
-	text-align: center;
 	width: 230px;
 }
 
-#header p {
+#header h3 {
 	font-size: 84%;
-	margin: 0;
+	margin-left: 850px;
 
 }
 
 #right {
-
+    margin-left: 120px;
 }
 
 #right h3 {
-	margin-left: 710px;
+	margin-left: 625px;
 	color: black;
 	font-size: 215%;
 	height: 20px;
 	font-family: 'Roboto', sans-serif;
+
 }
 
 #right table {
@@ -103,19 +151,19 @@ body {
 
 #right .products {
 	width: 100%;
+	text-align: center;
 }
 
 #right .products td {
-	padding-bottom: 20px;
+	padding-bottom: 10px;
 }
 
 #right .intro_product, #right .intro_product img {
-	width: 175px;
+	width: 430px;
 }
 
-#right .intro_product {
-	background-color: #ececec;
-	padding-bottom: 5px;
+#product_detail {
+	margin-top: 5%;
 }
 
 #right .intro_product p {
@@ -124,39 +172,75 @@ body {
 	text-align: center;
 }
 
+#right #hornav {
+	font-size: 90%;
+}
+
+#right #hornav td {
+	padding: 0 3px;
+}
+
+#right #hornav a {
+	color: #1722b4;
+}
+
+#right #hornav a:hover {
+	text-decoration: none;
+}
+
 #logo {
-	margin: 0px 10px;
+    margin-top: 20px;
+    margin-left: 25px;
 }
 
 #footer {
-	background: url("../images/footer_bg.png") repeat-x bottom;
-	background: url("../images/footer_bg.png") auto;
+	background: url("../images/footer_bg.png") repeat bottom;
+	margin: 0 -8px;
 }
 
 #footer #pm table {
-	margin: 140px auto -80px;
+	margin: 100px auto -80px;
 }
 
-#footer #copy {
+#footer {
 	background: url("../images/footer.png") no-repeat 2% bottom;
-	height: 54px;
-	padding-top: 85px;
+	height: 225px;
+	padding-top: 15px;
+	background-color: #295CE2;
 }
 
 #copy {
     margin-left: 250px;
 	display: flex;
 	flex-direction: row
+	margin-top: 560px;
+    font-size: 80%;
+    font-weight: normal
+}
+
+#copy p {
+    font-weight: normal
+}
+
+#MIN {
+    margin-top: 15px;
+    margin-left: 250px;
+}
+
+#MINLOGO {
+    margin-top: -50px;
+    margin-left: 250px;
 }
 
 #Help {
-	color: black;
+	color: white;
 	text-align: left;
 }
 
 #Vakansii {
-	color: black;
+	color: white;
 	text-align: left;
+	margin: 0 15px;
 }
 
 #Contacts {
@@ -187,6 +271,10 @@ body {
 	width: 7px;
 }
 
+#product_img {
+	margin-top: 70px;
+}
+
 #search input {
 	background-color: #fff;
 	border: 1px solid #000000;
@@ -195,7 +283,70 @@ body {
 	font-style: italic;
 	height: 20px;
 	outline: none;
-	text-align: right;
 	padding-right: 5px;
 	width: 150px;
+}
+
+#right #hornav {
+	font-size: 90%;
+}
+
+#right #hornav td {
+	padding: 0 3px;
+}
+
+#right #hornav a {
+	color: #1722b4;
+}
+
+#right #hornav a:hover {
+	text-decoration: none;
+}
+
+#right #product {
+	margin-top: 20px;
+	width: 700px;
+}
+
+#right #product .product_desc span {
+	padding-left: 20px;
+	width: 100%;
+	margin-left: 10px;
+}
+
+#right #product td p {
+	font-size: 85%;
+	font-weight: bold;
+	margin: 0 0 28px;
+}
+
+#right #product table p.price {
+	font-size: 120%;
+	font-weight: normal;
+}
+
+#right #product table td {
+	padding-right: 20px;
+
+}
+
+#right #product td p span {
+	font-weight: normal;
+	font-size: 120%;
+}
+
+#description {
+	margin-top: 10px;
+}
+
+#right #product td p span.title {
+	color: #58a41b;
+}
+
+#right #product p.desc_title {
+	margin: 10px 0 5px;
+}
+
+#right #product p.desc {
+	font-weight: normal;
 }

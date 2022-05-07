@@ -1,6 +1,14 @@
 {% extends 'main.html' %}
 {% block title %}<title>Comify</title>{% endblock %}
 {% block content %}
+{% load static %}
+<div id="slider">
+		<img src="{% static 'images/primer1.png' %}" class="slide-single" alt="" width="200" height="240">
+    	<img src="{% static 'images/primer2.png' %}" class="slide-single" alt="" width="200" height="240">
+    	<img src="{% static 'images/primer1.png' %}" class="slide-single" alt="" width="200" height="240">
+		<img src="{% static 'images/primer3.png' %}" class="slide-single" alt="" width="200" height="240">
+</div>
+<div class="MainProduct">
 <table>
     <tr>
         {% block main_header %}
@@ -14,14 +22,15 @@
 </table>
 <table class="products">
     {% for product in products %}
-        {% cycle '<tr>' '' '' '' '' '' '' %}
+        {% cycle '<tr>' '' ''  %}
         {% include 'product.html' %}
         {% if forloop.last %}
                 </tr>
         {% else %}
-            {% cycle '' '' '' '' '' ''  %}
+            {% cycle '' '' ''   %}
 
         {% endif %}
     {% endfor %}
 </table>
+</div>
 {% endblock %}

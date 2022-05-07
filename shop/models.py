@@ -21,8 +21,11 @@ class Section(models.Model):
 class Product(models.Model):
     title = models.CharField(max_length=70, verbose_name='Название')
     image = models.ImageField(upload_to='images', verbose_name='Изображение')
-    country = models.CharField(max_length=70, verbose_name='Регион')
+    image1 = models.ImageField(upload_to='images', verbose_name='Изображение ')
+    image2 = models.ImageField(upload_to='images', verbose_name='Изображение')
+    country = models.CharField(max_length=190, verbose_name='Заявитель')
     description = models.TextField(verbose_name='Описание')
+    description_actual = models.TextField(verbose_name='Актуальность')
 
     class Meta:
         ordering = ['title']

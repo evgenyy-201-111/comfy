@@ -1,13 +1,12 @@
 <td>
     <div class="intro_product">
-        <p class="img">
-            <img src="{{MEDIA_URL }}{{ product.image.url }}" alt="{{ product.title }}"/>
-        </p>
-        <p class="title">
-            <a href="{% url 'product' product.pk %}">{{ product.title }}</a>
-        </p>
-        <p>
-            <a class="link_cart" href="{{ request.path }}?add_cart={{ product.id }}"></a>
-        </p>
+        <a href="{% url 'product' product.pk %}">
+            <p class="img">
+                <img src="{{MEDIA_URL }}{{ product.image.url }}" alt="{{ product.title }}"/>
+            </p>
+            <p class="title">
+                {{ product.title }}
+            </p>
+        </a>
     </div>
 </td>

@@ -10,33 +10,36 @@
     {% endblock %}
     {% load static %}
 	<link rel="stylesheet" href="{% static 'styles/main.css' %}" type="text/css"/>
-    <script type="text/javascript" src="{% static ' js/functions.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script> <!--Библиотека jQuery-->
+    <script type="text/javascript" src="{% static 'js/js.js' %}"></script>
     <link href="{% static 'favicon.ico' %}" rel="shortcut icon" type="image/x-icon"/>
 </head>
 <body>
-	<header> <!--Шапка сайта-->
+	<header class="shapka"> <!--Шапка сайта-->
 		<div id="header-logo">
             <a href="{% url 'index' %}">
 			<ul id="logo">
                 <img src="{% static 'images/Logo.png' %}" alt="" width="60" height="50">
             </ul>
             </a>
+                <div id="header-nav-left">
+                    <a href="{% url 'index' %}">Лучшие</a>
+                    <a href="#">Вакансии</a>
+                </div>
 		</nav>
 		</div>
+        <div class="search-box">
+            <input class="search-txt" type="text" name="" placeholder="Поиск">
+            <a class="search-btn" href="#">
+                <img src="{% static 'images/lupa.png' %}">
+            </a>
+        </div>
 		<div id="header-nav" >
-			<nav >
+			<nav>
 			    <ul>
-			        <li><a href="{% url 'index' %}">Лучшее</a>
-			        	<ul id="header-nav-main">
-					    </ul>
-			        </li>
-			        <li><a href="#">Вакансии</a>
-			        	<ul id="header-nav-main">
-					    </ul>
-			        </li>
-			    <li><a href="#">Вход</a>
+			    <li><a href="{% url 'login' %}">Вход</a>
 			    	<ul id="header-nav-main">
-					        <li><a href="#">Регистрация</a></li>
+					        <li><a href="{% url 'registration' %}">Регистрация</a></li>
 					    </ul>
 			    </li>
 		    </ul>

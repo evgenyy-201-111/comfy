@@ -2,24 +2,44 @@
 {% block title %}<title>Comify</title>{% endblock %}
 {% block content %}
 {% load static %}
-<div id="slider">
-		<img src="{% static 'images/primer1.png' %}" class="slide-single" alt="" width="200" height="240">
-    	<img src="{% static 'images/primer2.png' %}" class="slide-single" alt="" width="200" height="240">
-    	<img src="{% static 'images/primer1.png' %}" class="slide-single" alt="" width="200" height="240">
-		<img src="{% static 'images/primer3.png' %}" class="slide-single" alt="" width="200" height="240">
-</div>
+
+<div class="registration">
+		<div id="registartion">
+			 <div class="slider">
+   				 <div class="slider__wrapper">
+			      <div class="slider__item">
+			        <div style="height: 110%;">
+			        	<img src="{% static 'images/primer2.png' %}" style="width:53%">
+			        </div>
+			      </div>
+			      <div class="slider__item">
+			        <div style="height: 110%;">
+			        	<img src="{% static 'images/primer1.png' %}" style="width:53%">
+			        </div>
+			      </div>
+			      <div class="slider__item">
+			        <div style="height: 110%;">
+			        	<img src="{% static 'images/primer4.png' %}" style="width:53%">
+			        </div>
+			      </div>
+			      <div class="slider__item">
+			        <div style="height: 110%;">
+			        	<img src="{% static 'images/primer3.png' %}" style="width:53%">
+			        </div>
+     			 </div>
+    			</div>
+    <a class="slider__control slider__control_left" href="#" role="button"></a>
+    <a class="slider__control slider__control_right slider__control_show" href="#" role="button"></a>
+  				</div>
+
+		</div>
+	</div>
 <div class="MainProduct">
-<table>
-    <tr>
-        {% block main_header %}
-        <td rowspan="2">
-            <div class="header">
+	{% block main_header %}
+            <div class="header1">
                 {% block header %}<h3>Лучшее из Comify</h3>{% endblock %}
             </div>
-        </td>
         {% endblock %}
-    </tr>
-</table>
 <table class="products">
     {% for product in products %}
         {% cycle '<tr>' '' ''  %}
